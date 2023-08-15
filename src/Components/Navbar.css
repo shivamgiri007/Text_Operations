@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap");
+
+.navbar {
+  --bs-navbar-padding-x: 0;
+  height: 5vw;
+  padding: 0px;
+}
+.myntra-logo {
+  /* padding-block: 0px; */
+  padding-inline: 2vw;
+}
+.myntra-logo img {
+  height: 4vw;
+  width: auto;
+}
+.Navbar_Items {
+  margin-right: 0;
+}
+.Navbar_Items li {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: smaller;
+}
+.icon_buttons button {
+  font-size: 11px;
+  font-weight: 800;
+}
+.search_input {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+.search_logo_section{
+    display: contents;
+}
+@media (max-width: 990px) {
+  .myntra-logo {
+    display: none;
+  }
+  
+  .search_logo_section {
+    position: absolute;
+    top: -5px;
+    display: flex;
+    align-items: center;
+    right: -40px;
+  }
+  .navbar{
+    height: 7vw;
+  }
+  
+}
