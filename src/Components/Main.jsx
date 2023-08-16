@@ -14,10 +14,19 @@ const [text , setText] = useState("Enter text here..");
   const rmSpaces = () => {
       setText(newtext.replace(/ /g,""));
 }
-    const handleOnChange = (event) => {
-        
-        setText(event.target.value);
-    }
+const rmExtraSpaces = () => {
+  setText(newtext.replace(/\s{2,}/g, " "));
+  
+}
+const copyText = () => {
+  navigator.clipboard.writeText(newtext);
+}
+const clearText = () => {
+  setText("");
+}
+const handleOnChange = (event) => {   
+    setText(event.target.value);
+}
     
     return (
     <>
@@ -33,10 +42,16 @@ const [text , setText] = useState("Enter text here..");
             id="exampleFormControlTextarea1"
             rows="8"
           ></textarea>
-          <button className="btn btn-primary mt-4 mx-3" onClick={toUpperCase}>toUpperCase</button>
-          <button className="btn btn-primary mt-4 mx-3" onClick={toLowerCase}>toLowerCase</button>
-          <button className="btn btn-primary mt-4 mx-3" onClick={rmSpaces}>Remove Spaces</button>
+          
         </div>
+      </div>
+      <div className="d-flex justify-content-center">
+      <button className="btn btn-primary mt-4 mx-1" onClick={toUpperCase}>toUpperCase</button>
+          <button className="btn btn-primary mt-4 mx-1" onClick={toLowerCase}>toLowerCase</button>
+          <button className="btn btn-primary mt-4 mx-1" onClick={rmSpaces}>Remove Spaces</button>
+          <button className="btn btn-primary mt-4 mx-1" onClick={rmExtraSpaces}>Remove Extra Spaces</button>
+          <button className="btn btn-primary mt-4 mx-1" onClick={copyText}>Copy Text</button>
+          <button className="btn btn-primary mt-4 mx-1" onClick={clearText}>Clear Text</button>
       </div>
     </>
   );
