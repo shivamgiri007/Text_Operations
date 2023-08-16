@@ -2,23 +2,25 @@ import React , {useState} from "react";
 
 
 export default function Main() {
-const [text , setText] = useState("Enter text here ...");
+const [text , setText] = useState("Enter text here..");
     const toUpperCase = () => {
-        setText("Button is clicked")
-        console.log(text);
+        var newtext = text.toUpperCase();
+        setText(newtext);
     }
-    const handleOnChange = () => {
+    const handleOnChange = (event) => {
         
-        console.log("This is handleOnchange");
+        setText(event.target.value);
     }
     return (
     <>
       <div>
         <div className="w-50 mx-auto">
         <h3>Enter text for operations</h3>
+
           <textarea
+          value={text}
           onChange={handleOnChange}
-            value={text}
+            
             class="form-control"
             id="exampleFormControlTextarea1"
             rows="8"
