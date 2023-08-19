@@ -5,3 +5,6 @@
 .text_css textarea{
     width: 100%;
 }
+.main_height{
+    height: 100vh;
+}
