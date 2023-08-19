@@ -73,7 +73,7 @@ function countLettersSpaces(newtext) {
       <div className="w-50 mx-auto p-5">
         <h4 className="text-decoration-underline">Text Summary</h4>
         <h6>Total Text Count without spaces is  : {countLettersWithoutSpaces(newtext)} </h6> 
-        <h6>Total spaces is text is  : {countLettersSpaces(newtext)} </h6> 
+        <h6>Total spaces in text is  : {countLettersSpaces(newtext)} </h6> 
       </div>
       
     </div>
